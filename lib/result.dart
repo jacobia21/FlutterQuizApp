@@ -24,18 +24,23 @@ class Result extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          resultPhrase,
-          style: TextStyle(
-            fontSize: 36,
-            fontWeight: FontWeight.bold,
+        Container(
+          width: double.infinity,
+          child: Text(
+            resultPhrase,
+            style: TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
         ),
         FlatButton(
             onPressed: resetHandler,
             textColor: Colors.blue,
-            child: Text('Restart Quiz')),
+            child: Text(
+              'Restart Quiz',
+            )),
       ],
     );
   }
